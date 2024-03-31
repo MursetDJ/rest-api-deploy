@@ -1,0 +1,37 @@
+###Goty
+GET http://localhost:3000/movies
+
+
+###para la peli
+
+GET http://localhost:3000/movies/1
+
+###Todas por un género
+
+GET http://localhost:3000/movies?genre=drama
+
+###Crear con post
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    
+    "title": "The Shawshank Redemption",
+    "year": 1999,
+    "director": "Frank Darabont",
+    "duration": 142,
+    "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+    "genre": ["Drama","Comedia"],
+    "rate": 9.3
+}
+
+
+###El patch o parche
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "title":"Wazaaa",
+    "year":1998
+}
